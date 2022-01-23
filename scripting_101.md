@@ -1,1 +1,1 @@
-[[/embedded_images/sample_script_anno.png]]
+[[/undergrads/embedded_images/sample_script_anno.png]]
