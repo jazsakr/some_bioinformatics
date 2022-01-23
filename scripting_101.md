@@ -1,4 +1,4 @@
-[[embedded_images/sample_script_anno.png]]
+[[https://github.com/jazsakr/undergrads/blob/08bcaa21e4378d068555d9ac1ec4d8e080dd916c/embedded_images/sample_script_anno.png]]
 # Section 1
 The HPC3 uses a SLURM scheduler and that is why we have to put `#SBATCH`. This is called a **bash header** and it provides instructions to the SLURM. This bash header **MUST**	be included at the top of every bash script.
 
