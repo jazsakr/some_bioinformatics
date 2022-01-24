@@ -7,6 +7,8 @@ Scripts could be written in so many ways. Some are strict requirements, while so
 # Example Script
 <img src="embedded_images/sample_script.png">
 
+The text editor used here is [Sublime Text](https://www.sublimetext.com/).
+
 ---
 # Section 1
 The HPC3 uses a SLURM scheduler and that is why we have to put `#SBATCH`. This is called a **bash header** and it provides instructions to the SLURM. This bash header **MUST**	be included at the top of every bash script.
