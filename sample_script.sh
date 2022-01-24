@@ -8,7 +8,7 @@
 #SBATCH -o minimap2_o%A.log
 #SBATCH -e minimap2_e%A.log
 #SBATCH --mail-type=fail,end
-#SBATCH --mail-user=email@uci.edu
+#SBATCH --mail-user_email@uci.edu
 
 sample=$1
 genome=$2
@@ -16,6 +16,8 @@ genome=$2
 ref="/user/reference/"
 fastq="/user/nanopore/fshd/fastqs/"
 output="/user/nanopore/fshd/analysis/"
+
+# this is a commented out line
 
 module load minimap2/2.17
 
