@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -A SEYEDAM_LAB
+#SBATCH -A account_name
 #SBATCH --partition=standard
 #SBATCH --mem=50G
 #SBATCH --cpus-per-task=1
