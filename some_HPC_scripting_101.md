@@ -1,4 +1,4 @@
-# Script Writing
+# Some Script Writing 101
 You have done some experiments or downloaded datasets of several samples, and you want to start doing analysis. You will need to write a script!
 
 Scripts could be written in so many ways. Some are strict requirements, while some are purely personal preference. We will look at an example script. This one in particular is tailored toward mapping a sample, `sample1`, to a genome, `human_genome.fa`, using the `minimap2` package.
