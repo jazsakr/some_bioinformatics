@@ -1,6 +1,9 @@
 # Script Writing
 You have done some experiments or downloaded datasets of several samples, and you want to start doing analysis. You will need to write a script!
 
+What is a script?
+
+
 Scripts could be written in so many ways. Some are strict requirements, while some are purely personal preference. We will look at an example script. This one in particular is tailored toward mapping a sample, `sample1`, to a genome, `human_genome.fa`, using the `minimap2` package.
 
 ---
@@ -33,7 +36,7 @@ The HPC3 uses a SLURM scheduler and that is why we have to put `#SBATCH`. This i
 
 `--mail-type=fail,end` --> send an email when job fails or ends
 
-`--mail-user=user_email@uci.edu` --> which email to send to
+`--mail-user=email@uci.edu` --> which email to send to
 
 ---
 # Section 2
