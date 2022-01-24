@@ -8,7 +8,7 @@
 #SBATCH -o minimap2_o%A.log
 #SBATCH -e minimap2_e%A.log
 #SBATCH --mail-type=fail,end
-#SBATCH --mail-user_email@uci.edu
+#SBATCH --mail-user=email@uci.edu
 
 sample=$1
 genome=$2

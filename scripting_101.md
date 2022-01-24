@@ -5,7 +5,7 @@ Scripts could be written in so many ways. Some are strict requirements, while so
 
 ---
 # Example Script
-[[https://github.com/jazsakr/undergrads/blob/08bcaa21e4378d068555d9ac1ec4d8e080dd916c/embedded_images/sample_script_anno.png]]
+<img src="embedded_images/sample_script_anno.png">
 
 ---
 # Section 1
