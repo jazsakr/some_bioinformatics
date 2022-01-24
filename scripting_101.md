@@ -1,9 +1,6 @@
 # Script Writing
 You have done some experiments or downloaded datasets of several samples, and you want to start doing analysis. You will need to write a script!
 
-What is a script?
-
-
 Scripts could be written in so many ways. Some are strict requirements, while some are purely personal preference. We will look at an example script. This one in particular is tailored toward mapping a sample, `sample1`, to a genome, `human_genome.fa`, using the `minimap2` package.
 
 ---
@@ -18,7 +15,7 @@ The HPC3 uses a SLURM scheduler and that is why we have to put `#SBATCH`. This i
 
 `#!/bin/bash` --> this MUST be the first line
 
-`-A SEYEDAM_LAB` --> who to charge money for the job
+`-A account_name` --> who to charge money for the job
 
 `--partition=standard` --> indicates that this is a paid job, not free
 
@@ -154,4 +151,4 @@ minimap2 -t 16 -ax map-ont --MD --secondary=no /user/reference/human_genome.fa /
 If we have more samples, say `sample2`, `sample3`, etc, we can run the same script again but with the new sample name as the first variable.
 
 **NOTE**: this will only work IF all the file locations are the same. Otherwise, we need to edit the script so that we can pass file paths as a command line argument.
-  - try to write that script to challenge yourself!
+  - Try to write that script to challenge yourself!
