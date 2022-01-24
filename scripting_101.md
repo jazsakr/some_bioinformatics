@@ -57,7 +57,7 @@ sample_script.sh sample1 human_genome.fa
 # Section 3
 This section tells the HPC were all the files it need to run the job is located.
 
-To make things easier and cleaner, we will also be assigning the files along with its location to a **variable**. Just like how we assigned the command line arguments to a variable in Section 2.
+To make things easier and cleaner, we will also be assigning the files along with its location to a **variable**. Just like how we assigned the command line arguments to a variable in [Section 2]().
 
 ## File & Directory Paths
 To give the location of a file, you must know its filesystem hierarchy. In our example, if we saved our input file `sample1.fastq` in the `fastq` **directory** (means folder), which is located in the `fshd` directory, which is located in the `nanopore` directory, which is in our `user` directory, then providing the file path a little like giving someone street directions to a destination.
@@ -136,13 +136,13 @@ ${output}${sample}"_mapped.sam"
   ---
 
 # Putting It All Together
-We submit the script by running:
+We submit the script in our terminal by running:
 
 ```bash
 sbatch sample_script.sh sample1 human_genome.fa
 ```
 
-When the HPC reads this script and load minimap2, it will call all the variables you have assigned and will look like this:
+When the HPC reads this script and loads minimap2, it will call all the variables you have assigned and will look like this:
 
 ```bash
 minimap2 -t 16 -ax map-ont --MD --secondary=no /user/reference/human_genome.fa /user/nanopore/fshd/fastqs/sample1.fastq > /user/nanopore/fshd/analysis/sample1_mapped.sam
