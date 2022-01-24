@@ -5,7 +5,7 @@ Scripts could be written in so many ways. Some are strict requirements, while so
 
 ---
 # Example Script
-<img src="embedded_images/sample_script_anno.png">
+<img src="embedded_images/sample_script.png">
 
 ---
 # Section 1
