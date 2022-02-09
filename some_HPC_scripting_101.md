@@ -187,12 +187,4 @@ If we have more samples, say `sample2`, `sample3`, etc, we can run the same scri
 
   ---
 
-# Get Your Script On the HPC
-
-Congratulations, you've written a script! Now you need to run it, so you are probably wondering: How to I get my script onto the HPC? But before you do that, you need to log on to the HPC first.
-
-## Logging onto the HPC
-
-Note: Before you start, make sure your computer is connected to the school's designated VPN. You will not be able to connect to the HPC without doing this FIRST. At our universtiy, it looks like this (at the time of writing):
-
-<img src="embedded_images/anyconnect_uci_vpn.png">
+Congratulations, you've written a script! Now you need to run it, so you are probably wondering: How to I get my script onto the HPC? See the next tutorial to do just that.
