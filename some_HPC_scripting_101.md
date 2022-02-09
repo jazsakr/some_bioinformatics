@@ -1,24 +1,28 @@
 # Some HPC Script Writing 101
-You have done some experiments or downloaded datasets of several samples, and you want to start doing analysis. chances are you will need to write a script!
+You have done some experiments or downloaded datasets of several samples, and you want to start doing analysis. Chances are you will need to write a script!
 
-**What is a script?**
+**Before You Begin**
 
-Scripts could be written in so many ways. Some are strict requirements, while some are purely personal preference. We will look at an example script. This one in particular is tailored toward mapping a sample, `sample1`, to a genome, `human_genome.fa`, using the `minimap2` package.
+I would be familiar with the following:
+- what is the terminal.
+- what is the HPC.
+- what is SLURM.
 
 ---
-# Example Script
+
+# What is a bash script?
+
+Scripts could be written in so many ways. Some are strict requirements, while some are purely personal preference. We will look at an example script. This one in particular is tailored toward mapping a sample, `sample1`, to a genome, `human_genome.fa`, using the `minimap2` package. We will be going through each section.
+
+**Example Script**
+
 <img src="embedded_images/sample_script.png">
 
 The text editor used here is [Sublime Text](https://www.sublimetext.com/).
 
 ---
 # Section 1
-
-HPC3 is what? basically the
-SLURM schedule define
-
-
-The HPC3 uses a SLURM scheduler and that is why we have to put `#SBATCH`. This is whole section is called a **bash header** and it provides instructions to the SLURM. This bash header **MUST**	be included at the top of every SLURM bash script.
+Our HPC uses a SLURM scheduler and that is why we have to put `#SBATCH` at the beginning of each line. This whole section is called a **bash header** and it provides instructions to the SLURM. This bash header **MUST** be included at the top of every SLURM bash script.
 
 structure of each line.
 
@@ -43,17 +47,21 @@ something is wrong
 
 `--job-name=minimap2` --> the name of the job (just for our convenience)
 
-`-o minimap2_o%A.log` --> request standard output log with job name (in this case "minimap2") & number (job number is generated automatically once job is submitted)
+`-o minimap2_o%A.log` --> request standard output log with job name (in this case "minimap2") & job number (job number is generated automatically once job is submitted)
 
 define what standard output is
 
-`-e minimap2_e%A.log` --> request standard error log with job name (in this case "minimap2") & number (job number is generated automatically once job is submitted)
+`-e minimap2_e%A.log` --> request standard error log with job name (in this case "minimap2") & job number (job number is generated automatically once job is submitted)
 
 standard error
 
 `--mail-type=fail,end` --> send an email when job fails or ends
 
 `--mail-user=email@uci.edu` --> which email to send to
+
+- why specifiy the run time?
+  example of
+- what is standard output and standard error?
 
 ---
 # Section 2
@@ -176,3 +184,15 @@ If we have more samples, say `sample2`, `sample3`, etc, we can run the same scri
 
 **NOTE**: this will only work IF all the file locations are the same. Otherwise, we need to edit the script so that we can pass file paths as a command line argument.
   - Try to write that script to challenge yourself!
+
+  ---
+
+# Get Your Script On the HPC
+
+Congratulations, you've written a script! Now you need to run it, so you are probably wondering: How to I get my script onto the HPC? But before you do that, you need to log on to the HPC first.
+
+## Logging onto the HPC
+
+Note: Before you start, make sure your computer is connected to the school's designated VPN. You will not be able to connect to the HPC without doing this FIRST. At our universtiy, it looks like this (at the time of writing):
+
+<img src="embedded_images/anyconnect_uci_vpn.png">
