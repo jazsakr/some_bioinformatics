@@ -24,10 +24,6 @@ The text editor used here is [Sublime Text](https://www.sublimetext.com/).
 # Section 1
 Our HPC uses a SLURM scheduler and that is why we have to put `#SBATCH` at the beginning of each line. This whole section is called a **bash header** and it provides instructions to the SLURM. This bash header **MUST** be included at the top of every SLURM bash script.
 
-structure of each line.
-
--v vs --verbose
-
 ## Here is what each line means:
 
 `#!/bin/bash` --> this MUST be the first line (why?)
@@ -42,26 +38,15 @@ structure of each line.
 
 `--time=06:00:00` --> run job for no more than 6 hrs
 
-why specificy the time?
-something is wrong
-
 `--job-name=minimap2` --> the name of the job (just for our convenience)
 
 `-o minimap2_o%A.log` --> request standard output log with job name (in this case "minimap2") & job number (job number is generated automatically once job is submitted)
 
-define what standard output is
-
 `-e minimap2_e%A.log` --> request standard error log with job name (in this case "minimap2") & job number (job number is generated automatically once job is submitted)
-
-standard error
 
 `--mail-type=fail,end` --> send an email when job fails or ends
 
 `--mail-user=email@uci.edu` --> which email to send to
-
-- why specifiy the run time?
-  example of
-- what is standard output and standard error?
 
 ---
 # Section 2
@@ -74,8 +59,6 @@ An example application would be using a script designed in this way to:
 - and more
 
 NOTE: order of the command line arguments is **IMPORTANT**! In our example, if we want to assign our sample name to the variable `sample`, we must list it as the first command line argument because `$1` means that the first command line argument will be assigned to the variable `sample`.
-
-* be more clear about where the command line arguments
 
 For our sample script, the arguments will be written after the script like this:
 ```bash
@@ -176,7 +159,7 @@ When the HPC reads this script and loads minimap2, it will call all the variable
 ```bash
 minimap2 -t 16 -ax map-ont --MD --secondary=no /user/reference/human_genome.fa /user/nanopore/fshd/fastqs/sample1.fastq > /user/nanopore/fshd/analysis/sample1_mapped.sam
 ```
-notice how it is in one line
+\* notice how it is all on one line.
 
 ---
 
