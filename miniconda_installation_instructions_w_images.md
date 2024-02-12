@@ -2,8 +2,7 @@
 
 ## Download and install `miniconda`
 
-> [!tip] Before you start.
-> Open Terminal and go to where you’d like to install `conda` (i.e. your home folder on your computer or remote server)
+<img src="embedded_images/install_miniconda_before_you_start.png">
 
 1. Go to [Miniconda page on Anaconda website](https://docs.anaconda.com/free/miniconda/) (click the link).
 2. Under the [Latest Miniconda Installer Links](https://docs.anaconda.com/free/miniconda/#latest-miniconda-installer-links) section, right click [Miniconda3 Linux 64-bit](https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh) in the Linux section and copy the link.
